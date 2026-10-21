@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "orbit-studio-alan-vo",
+  "owner": "ALANDVO",
+  "email": "alanvo@gmail.com",
+  "domain": "AI/ML developer tools",
+  "summary": "Work in progress: orbit-studio-alan-vo",
+  "workflows": [
+    "Track and manage factual/self-contradiction errors in AI engineering documentation across phases and lessons",
+    "Generate opt-in LLM explanations for detected issues with configurable providers",
+    "Evaluate LLM accuracy on issue detection with reproducible labeled dataset and metrics"
+  ],
+  "auth": "oidc-keycloak-saml-broker",
+  "llm_providers": [
+    "openai-compatible",
+    "anthropic",
+    "gemini",
+    "ollama"
+  ],
+  "status": "work-in-progress"
+}

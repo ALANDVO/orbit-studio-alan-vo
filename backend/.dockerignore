@@ -1,0 +1,25 @@
+# Backend Docker ignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+*.db
+*.sqlite
+.git/
+.gitignore
+README.md
+CHANGELOG.md
+LICENSE
+portfolio.json
+feature-plan.json
+PLAN.md
+STATUS.md
+frontend/
+keycloak/
+docker-compose.yml
+.dockerignore
