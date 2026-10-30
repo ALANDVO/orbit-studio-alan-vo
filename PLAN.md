@@ -10,7 +10,7 @@ foundation-skeleton
 
 ### foundation-skeleton — Project Foundation: FastAPI + React skeleton with basic health endpoint
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - FastAPI backend runs with /health endpoint
@@ -19,6 +19,10 @@ Acceptance:
 - docker-compose.yml with backend, frontend, and Keycloak services
 - Basic pytest and vitest test suites run
 - README with install/run/test instructions
+
+Implementation: `backend/app/main.py`, `backend/Dockerfile`, `frontend/src/App.tsx`, `frontend/Dockerfile`, `docker-compose.yml`
+
+Tests: `backend/tests/test_health.py`, `frontend/src/App.test.tsx`
 
 ### issue-tracker-core — Issue Tracker Core: CRUD API for AI engineering doc issues
 
