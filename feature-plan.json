@@ -5,7 +5,7 @@
     {
       "id": "foundation-skeleton",
       "title": "Project Foundation: FastAPI + React skeleton with basic health endpoint",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "FastAPI backend runs with /health endpoint",
         "React frontend builds and serves via Vite dev server",
@@ -14,8 +14,8 @@
         "Basic pytest and vitest test suites run",
         "README with install/run/test instructions"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": ["backend/app/main.py", "backend/Dockerfile", "frontend/src/App.tsx", "frontend/Dockerfile", "docker-compose.yml"],
+      "tests": ["backend/tests/test_health.py", "frontend/src/App.test.tsx"]
     },
     {
       "id": "issue-tracker-core",
