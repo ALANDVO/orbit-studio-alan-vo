@@ -26,7 +26,7 @@ Tests: `backend/tests/test_health.py`, `frontend/src/App.test.tsx`
 
 ### issue-tracker-core — Issue Tracker Core: CRUD API for AI engineering doc issues
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - POST /api/issues creates issue with validation

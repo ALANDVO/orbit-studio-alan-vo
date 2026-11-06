@@ -20,7 +20,7 @@
     {
       "id": "issue-tracker-core",
       "title": "Issue Tracker Core: CRUD API for AI engineering doc issues",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "POST /api/issues creates issue with validation",
         "GET /api/issues lists with pagination/filtering",
