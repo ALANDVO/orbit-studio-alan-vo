@@ -168,3 +168,7 @@ For production, deploy behind a TLS-terminating reverse proxy (nginx, Traefik, C
 **Alan Vo**  
 alanvo@gmail.com  
 AI & Machine Learning
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

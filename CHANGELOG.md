@@ -31,3 +31,7 @@ Partial code published for continued development. Known issues: STATUS.md.
 - nginx reverse proxy for frontend with API proxy to backend
 - Health checks on all Docker services
 - Demo mode binds to localhost only
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

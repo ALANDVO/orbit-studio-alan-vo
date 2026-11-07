@@ -85,3 +85,6 @@ Acceptance:
 - Limitations discussion in README
 - Results recorded in CHANGELOG
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
