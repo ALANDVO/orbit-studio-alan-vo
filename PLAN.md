@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-foundation-skeleton
+issue-tracker-core
 
 ## Roadmap
 
@@ -26,7 +26,7 @@ Tests: `backend/tests/test_health.py`, `frontend/src/App.test.tsx`
 
 ### issue-tracker-core — Issue Tracker Core: CRUD API for AI engineering doc issues
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - POST /api/issues creates issue with validation
@@ -36,6 +36,10 @@ Acceptance:
 - DELETE /api/issues/{id} deletes issue
 - SQLite persistence with UTC timestamps
 - At least 5 backend tests covering CRUD and validation
+
+Implementation: `backend/app/main.py`, `backend/app/models.py`, `backend/app/schemas.py`, `backend/app/crud.py`, `backend/app/database.py`
+
+Tests: `backend/tests/test_issues.py`
 
 ### issue-tracker-ui — Issue Tracker UI: React dashboard for managing issues
 

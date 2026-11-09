@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "foundation-skeleton",
+  "current_feature": "issue-tracker-core",
   "features": [
     {
       "id": "foundation-skeleton",
@@ -20,7 +20,7 @@
     {
       "id": "issue-tracker-core",
       "title": "Issue Tracker Core: CRUD API for AI engineering doc issues",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "POST /api/issues creates issue with validation",
         "GET /api/issues lists with pagination/filtering",
@@ -30,8 +30,8 @@
         "SQLite persistence with UTC timestamps",
         "At least 5 backend tests covering CRUD and validation"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": ["backend/app/main.py", "backend/app/models.py", "backend/app/schemas.py", "backend/app/crud.py", "backend/app/database.py"],
+      "tests": ["backend/tests/test_issues.py"]
     },
     {
       "id": "issue-tracker-ui",
