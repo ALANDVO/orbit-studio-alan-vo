@@ -102,6 +102,3 @@ async def delete_issue_endpoint(issue_id: int, session: AsyncSession = Depends(g
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-</arg_key>
-<arg_key=i>
-Creating updated main.py with issue routes

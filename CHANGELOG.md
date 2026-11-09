@@ -1,8 +1,25 @@
 # Changelog
 
-## 1.2.0 — work-in-progress checkpoint
+## 1.3.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.2.0 — work-in-progress checkpoint
+
+### Added
+- Issue Tracker Core CRUD API (`/api/issues`) with full validation
+  - POST /api/issues — create issue with title, description, phase
+  - GET /api/issues — list with pagination, phase filter, search
+  - GET /api/issues/{id} — get single issue
+  - PUT /api/issues/{id} — update issue (partial updates)
+  - DELETE /api/issues/{id} — delete issue
+- SQLite persistence with UTC timestamps via SQLAlchemy + aiosqlite
+- 13 backend tests covering CRUD, validation, pagination, filtering, search
+- Pydantic schemas with min/max length validation
+
+### Fixed
+- Database initialization for test suite (lifespan not triggered by TestClient)
+- Test cleanup using proper SQLAlchemy text() syntax
 
 ## 1.1.0 — work-in-progress checkpoint
 

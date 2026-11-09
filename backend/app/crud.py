@@ -66,6 +66,3 @@ async def delete_issue(session: AsyncSession, issue_id: int) -> bool:
     await session.delete(db_issue)
     await session.commit()
     return True
-</arg_key>
-<arg_key=i>
-Creating CRUD operations for issues
