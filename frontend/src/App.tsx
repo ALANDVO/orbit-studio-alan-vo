@@ -1,36 +1,39 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import IssueList from './IssueList';
 
+// HealthView component
 interface HealthResponse {
-  status: string
-  version: string
-  environment: string
-  demo_mode: boolean
+  status: string;
+  version: string;
+  environment: string;
+  demo_mode: boolean;
 }
 
-function App() {
-  const [health, setHealth] = useState<HealthResponse | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+function HealthView() {
+  const [health, setHealth] = useState<HealthResponse | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchHealth() {
       try {
-        const response = await fetch('/health')
-        if (!response.ok) throw new Error(`HTTP ${response.status}`)
-        const data = await response.json()
-        setHealth(data)
+        const response = await fetch('/health');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        setHealth(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error')
+        setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
-    fetchHealth()
-  }, [])
+    fetchHealth();
+  }, []);
 
-  if (loading) return <div className="loading">Loading...</div>
-  if (error) return <div className="error">Error: {error}</div>
-  if (!health) return <div className="empty">No data</div>
+  if (loading) return <div className="loading">Loading...</div>;
+  if (error) return <div className="error">Error: {error}</div>;
+  if (!health) return <div className="empty">No data</div>;
 
   return (
     <div className="app">
@@ -57,7 +60,20 @@ function App() {
         <p>{'Alan Vo <alanvo@gmail.com> | AI & Machine Learning'}</p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+// Router component exported as default
+export default function App() {
+  return (
+    <BrowserRouter>
+      <nav style={{ padding: '1rem', background: '#f0f0f0' }}>
+        <Link to="/">Health</Link> | <Link to="/issues">Issues</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<HealthView />} />
+        <Route path="/issues" element={<IssueList />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
