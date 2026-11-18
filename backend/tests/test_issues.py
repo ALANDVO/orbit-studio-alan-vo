@@ -13,7 +13,7 @@ client = TestClient(app)
 
 @pytest_asyncio.fixture(autouse=True, scope="function")
 async def setup_db():
-    await init_db()
+    # await init_db()
     yield
     # Clean up after test
     async with engine.begin() as conn:
