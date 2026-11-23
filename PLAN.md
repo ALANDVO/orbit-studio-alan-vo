@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-issue-tracker-core
+issue-tracker-ui
 
 ## Roadmap
 
@@ -43,7 +43,7 @@ Tests: `backend/tests/test_issues.py`
 
 ### issue-tracker-ui — Issue Tracker UI: React dashboard for managing issues
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Issue list page with pagination, search, filter by phase
@@ -52,6 +52,10 @@ Acceptance:
 - Loading/error/empty states
 - Typed API client derived from backend routes
 - At least 2 frontend tests for user-visible behavior
+
+Implementation: `frontend/src/IssueList.tsx`, `frontend/src/api.ts`
+
+Tests: `frontend/src/IssueList.test.tsx`
 
 ### llm-explanation-engine — LLM Explanation Engine: Opt-in advisory explanations for issues
 
