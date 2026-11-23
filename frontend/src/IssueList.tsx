@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { IssuePhase, IssueListResponse, ListIssuesParams, fetchIssues } from './api';
+import { IssuePhase, IssueListResponse, fetchIssues } from './api';
 
-// Helper to get enum values
-const issuePhaseValues = Object.values(IssuePhase) as IssuePhase[];
+// Runtime list of phases (IssuePhase is a type, not a runtime enum).
+const issuePhaseValues: IssuePhase[] = ['backlog', 'triage', 'in_progress', 'review', 'done'];
 
 export default function IssueList() {
   const [issues, setIssues] = useState<IssueListResponse | null>(null);
@@ -11,7 +11,7 @@ export default function IssueList() {
 
   // Filter state
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(20);
+  const [pageSize] = useState(20);
   const [phase, setPhase] = useState<IssuePhase | undefined>(undefined);
   const [search, setSearch] = useState('');
 

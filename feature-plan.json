@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "issue-tracker-core",
+  "current_feature": "issue-tracker-ui",
   "features": [
     {
       "id": "foundation-skeleton",
@@ -14,8 +14,17 @@
         "Basic pytest and vitest test suites run",
         "README with install/run/test instructions"
       ],
-      "implementation": ["backend/app/main.py", "backend/Dockerfile", "frontend/src/App.tsx", "frontend/Dockerfile", "docker-compose.yml"],
-      "tests": ["backend/tests/test_health.py", "frontend/src/App.test.tsx"]
+      "implementation": [
+        "backend/app/main.py",
+        "backend/Dockerfile",
+        "frontend/src/App.tsx",
+        "frontend/Dockerfile",
+        "docker-compose.yml"
+      ],
+      "tests": [
+        "backend/tests/test_health.py",
+        "frontend/src/App.test.tsx"
+      ]
     },
     {
       "id": "issue-tracker-core",
@@ -30,13 +39,21 @@
         "SQLite persistence with UTC timestamps",
         "At least 5 backend tests covering CRUD and validation"
       ],
-      "implementation": ["backend/app/main.py", "backend/app/models.py", "backend/app/schemas.py", "backend/app/crud.py", "backend/app/database.py"],
-      "tests": ["backend/tests/test_issues.py"]
+      "implementation": [
+        "backend/app/main.py",
+        "backend/app/models.py",
+        "backend/app/schemas.py",
+        "backend/app/crud.py",
+        "backend/app/database.py"
+      ],
+      "tests": [
+        "backend/tests/test_issues.py"
+      ]
     },
     {
       "id": "issue-tracker-ui",
       "title": "Issue Tracker UI: React dashboard for managing issues",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Issue list page with pagination, search, filter by phase",
         "Create/edit issue modal with validation",
@@ -45,8 +62,13 @@
         "Typed API client derived from backend routes",
         "At least 2 frontend tests for user-visible behavior"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "frontend/src/IssueList.tsx",
+        "frontend/src/api.ts"
+      ],
+      "tests": [
+        "frontend/src/IssueList.test.tsx"
+      ]
     },
     {
       "id": "llm-explanation-engine",

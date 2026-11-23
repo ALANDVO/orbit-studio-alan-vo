@@ -1,8 +1,23 @@
 # Changelog
 
-## 1.4.0 — work-in-progress checkpoint
+## 1.5.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.4.0 — work-in-progress checkpoint
+
+### Added
+- Issue Tracker UI list page slice: issues list with pagination, phase filter,
+  and search input (`frontend/src/IssueList.tsx`, `frontend/src/api.ts`).
+- `react-router-dom` declared as a frontend dependency (required by `App.tsx`).
+
+### Fixed
+- `IssueList` crash: `Object.values(IssuePhase)` on a type-only export threw
+  `Cannot convert undefined or null to object`; replaced with an explicit phase
+  array.
+- Removed unused `ListIssuesParams` import and `setPageSize` so `tsc` is clean.
+
+Known issues: STATUS.md.
 
 ## 1.3.0 — work-in-progress checkpoint
 
